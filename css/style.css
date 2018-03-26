@@ -14,6 +14,7 @@ body {
 	width: 100%;
 	height: 100%;
 	padding: 16px;
+	font-family: "Roboto",sans-serif;
 }
 
 body#gallery {
@@ -80,8 +81,27 @@ body#gallery {
 	text-transform: uppercase;
 }
 
-#landing h1 span {
+h1 span {
 	color: var(--magenta);
+}
+
+#gallery nav figure {
+	height: 96px;
+	width: 96px;
+	border: solid black 2px;
+	display: inline-block;
+}
+
+#gallery nav article {
+	padding-left: 30px;
+	display: inline-block;
+}
+
+#gallery h1 {
+	font: 130px "Roboto",sans-serif;
+	font-weight: 300;
+	letter-spacing: 0;
+	text-transform: uppercase;
 }
 
 #gallery section#overflow-window{
@@ -99,7 +119,7 @@ body#gallery {
 }
 
 #gallery figure {
-	width: auto;
+	width: initial;
 }
 
 #gallery figure>img {
@@ -108,6 +128,91 @@ body#gallery {
 	max-height: 100%;
 	width: auto;
 	height: auto;
+	display: inline-block;
+}
+
+#contact section {
+	position: relative;
+	top: 50%;
+	transform: translateY(-52%);
+}
+
+#contact h1 {
+	font: 80px "Roboto",sans-serif;
+	font-weight: 300;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#contact form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+  }
+ #contact input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     border: 1px solid #bfbfbf;
+     border-left: 8px solid var(--magenta);
+     font-family: 'Merriweather', sans-serif;
+     resize: none;
+ }
+#contact form:focus {
+       @include box-shadow(0 0px 2px rgba($red, 1)!important);
+    }
+  
+  
+#contact #input-submit {
+     color: white; 
+     background: red;
+     cursor: pointer;
+     border: none;
+    }
+#contact #input-submit:hover {
+       box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }
+  
+#contact textarea {
+      height: 126px;
+  }
+
+
+
+#contact .half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+#contact .right { width: 50%; }
+
+#contact .left {
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+#contact .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+#contact .cf:before,
+#contact .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+#contact .cf:after {
+    clear: both;
 }
 
 
@@ -156,13 +261,36 @@ body {
 	line-height: 125px;
 }
 
+#gallery nav {
+	height: 96px;
+	margin-bottom: 40px;
+}
+
+#gallery nav figure {
+	height: 96px;
+	width: 96px;
+	border: solid black 2px;
+	display: inline-block;
+}
+
+#gallery nav article {
+	padding-left: 30px;
+	display: inline-block;
+}
+
+#gallery h1 {
+	font: 130px "Roboto",sans-serif;
+	font-weight: 300;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	line-height: 0;
+}
+
 
 #gallery section#overflow-window{
 	position: relative;
 	height: 80%;
 	width: 100%;
-	top: 50%;
-	transform: translateY(-50%);
 	overflow-x: scroll;
 }
 
